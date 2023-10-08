@@ -1,4 +1,4 @@
-package wo1261931780.testSpringCloud;
+package wo1261931780.gatewayServer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,10 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author 64234
  */
 @SpringBootApplication
-public class TestSpringCloudApplication {
+public class GatewayServerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TestSpringCloudApplication.class, args);
+		SpringApplication.run(GatewayServerApplication.class, args);
 	}
 
 }

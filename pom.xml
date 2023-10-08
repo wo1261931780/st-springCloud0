@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.1.4</version>
+		<version>3.0.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>wo1261931780</groupId>
@@ -18,15 +18,15 @@
 		<!--<module>orderService</module>-->
 		<!--<module>eurekaServer</module>-->
 		<!--<module>feignApi</module>-->
-		<!--<module>getway</module>-->
+		<module>gatewayServer</module>
 	</modules>
-	<!--<packaging>pom</packaging>-->
+	<packaging>pom</packaging>
 	<properties>
-		<java.version>21</java.version>
+		<java.version>17</java.version>
 		<!--<spring-native.version>0.12.1</spring-native.version>-->
 		<!--maven的打包配置-->
-		<maven.compiler.source>21</maven.compiler.source>
-		<maven.compiler.target>21</maven.compiler.target>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
 		<!--编码格式-->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -38,7 +38,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
-			<version>3.1.4</version>
+			<version>3.0.2</version>
 		</dependency>
 		<!--spring网络WEB-->
 		<!--使用Spring MVC构建Web，包括RESTful，应用程序。使用Apache Tomcat作为默认的嵌入式容器。-->
@@ -46,7 +46,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<version>3.1.4</version>
+			<version>3.0.2</version>
 			<!--<scope>test</scope>-->
 			<!--上面的scope表示作用范围-->
 			<!--在没有说明的情况下，scope默认就是compile-->
@@ -70,7 +70,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-cache</artifactId>
-			<version>3.1.4</version>
+			<version>3.0.2</version>
 		</dependency>
 		<!--Spring Boot DevTools 开发人员工具-->
 		<!--提供快速的应用重启、LiveReload和配置，以增强开发体验。-->
@@ -92,7 +92,30 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
-			<version>3.1.4</version>
+			<version>3.0.2</version>
+		</dependency>
+		<!--=============================================================================================-->
+		<!--springCloud-->
+		<!--=============================================================================================-->
+		<!-- springCloud -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-dependencies</artifactId>
+			<version>2022.0.0</version>
+			<!--            <version>2022.0.1</version>-->
+			<type>pom</type>
+			<scope>import</scope>
+		</dependency>
+		<!--nacos的管理依赖-->
+		<!--        其实有了nacos，就不需要eureka了-->
+		<!--        所以同时要把子项目中的eureka依赖注释掉-->
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-alibaba-dependencies</artifactId>
+			<version>2022.0.0.0</version>
+<!--			<version>2.2.5.RELEASE</version>-->
+			<type>pom</type>
+			<scope>import</scope>
 		</dependency>
 		<!--=============================================================================================-->
 		<!--DEVELOPER_TOOLS-->
@@ -107,8 +130,6 @@
 			<!--因为只是源代码中提供了对应的功能-->
 			<!--所以其实不需要参与源代码的打包-->
 		</dependency>
-		
-		
 		<!--=============================================================================================-->
 		<!--WEB-->
 		<!--=============================================================================================-->
@@ -499,7 +520,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-autoconfigure</artifactId>
-			<version>3.1.4</version>
+			<version>3.0.2</version>
 		</dependency>
 	</dependencies>
 	<repositories>

@@ -1,0 +1,8 @@
+server:
+  port: 8080
+spring:
+  cloud:
+    nacos:
+      discovery:
+        cluster-name: dev
+        server-addr: 2.0.0.1:8848
