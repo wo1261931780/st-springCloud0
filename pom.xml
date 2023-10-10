@@ -104,13 +104,13 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-dependencies</artifactId>
 			<version>2022.0.0</version>
-			<!--            <version>2022.0.1</version>-->
+			<!--    <version>2022.0.1</version>-->
 			<type>pom</type>
 			<scope>import</scope>
 		</dependency>
 		<!--nacos的管理依赖-->
-		<!--        其实有了nacos，就不需要eureka了-->
-		<!--        所以同时要把子项目中的eureka依赖注释掉-->
+		<!--其实有了nacos，就不需要eureka了-->
+		<!--所以同时要把子项目中的eureka依赖注释掉-->
 		<dependency>
 			<groupId>com.alibaba.cloud</groupId>
 			<artifactId>spring-cloud-alibaba-dependencies</artifactId>
@@ -565,10 +565,10 @@
 	</repositories>
 	<build>
 		<plugins>
-<!--			<plugin>-->
-<!--				<groupId>org.springframework.boot</groupId>-->
-<!--				<artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--			</plugin>-->
+			<!--			<plugin>-->
+			<!--				<groupId>org.springframework.boot</groupId>-->
+			<!--				<artifactId>spring-boot-maven-plugin</artifactId>-->
+			<!--			</plugin>-->
 		</plugins>
 	</build>
 
