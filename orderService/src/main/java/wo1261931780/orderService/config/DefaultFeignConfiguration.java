@@ -18,11 +18,11 @@ import org.springframework.context.annotation.Bean;
  * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved.
  */
 public class DefaultFeignConfiguration {
-	@Bean
-	public Logger.Level logLevel() {
+	// @Bean
+	// public Logger.Level logLevel() {
 		// 通过配置文件来配置日志级别
 		// 也可以在yaml中写，效果一样
 		// 一般用basic，一般full还是会消耗性能的
-		return Logger.Level.FULL;
-	}
+		// return Logger.Level.BASIC;
+	// }
 }

@@ -24,16 +24,16 @@ public class OrderController {
 	@Autowired
 	private OrderService orderService;
 
-	@Value("${pattern.dateformat}")
-	private String pattern;
+	// @Value("${pattern.dateformat}")
+	// private String pattern;
 
-	@Autowired
-	private UserClient userClient;
+	// @Autowired
+	// private UserClient userClient;
 
-	@GetMapping("now")
-	public String now() {
-		return LocalDateTime.now().format(DateTimeFormatter.ofPattern(pattern));
-	}
+	// @GetMapping("now")
+	// public String now() {
+	// 	return LocalDateTime.now().format(DateTimeFormatter.ofPattern(pattern));
+	// }
 
 
 	// 下面是使用feign来实现的接口调用
@@ -42,7 +42,7 @@ public class OrderController {
 	public Order queryOrderByUserId(@PathVariable("orderId") Long orderId) {
 		// 根据id查询订单并返回
 		// return orderService.queryOrderById(orderId);
-		User byId = userClient.findById(orderId);
+		// User byId = userClient.findById(orderId);
 		return orderService.queryById(orderId);
 	}
 }

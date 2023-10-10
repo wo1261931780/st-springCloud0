@@ -12,8 +12,8 @@ import wo1261931780.userService.pojo.User;
 public interface UserClient {
 	// 里面封装的是所有对userService发起的远程调用
 
-	@GetMapping("/user/{id}")
-	User findById(@PathVariable("id") Long id);
+	// @GetMapping("/user/{id}")
+	// User findById(@PathVariable("id") Long id);
 	// 声明一个远程调用
 	// 这里的调用地址，必须和userService中的请求路径一致
 	// feign可以直接抽取出来，作为一个独立的模块

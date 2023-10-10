@@ -27,11 +27,11 @@
 			<version>2022.0.0.0</version>
 		</dependency>
 		<!--nacos配置文件管理依赖，读取bootstrap的-->
-		<dependency>
-			<groupId>com.alibaba.cloud</groupId>
-			<artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-			<version>2022.0.0.0</version>
-		</dependency>
+		<!--<dependency>-->
+		<!--	<groupId>com.alibaba.cloud</groupId>-->
+		<!--	<artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
+		<!--	<version>2022.0.0.0</version>-->
+		<!--</dependency>-->
 	</dependencies>
 	
 	<build>

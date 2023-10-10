@@ -27,8 +27,8 @@ public class OrderService {
 	@Autowired
 	private RestTemplate restTemplate;
 	// 注入以后发送请求
-	@Autowired
-	private UserClient userClient;
+	// @Autowired
+	// private UserClient userClient;
 	// 对于上面的代码，存在着可读性差，url难以维护的问题
 
 	/*@Autowired
@@ -62,12 +62,12 @@ public class OrderService {
 	}
 
 	// 注入Feign的接口
-	public Order queryById2(Long userId) {
-		Order order = orderMapper.findById(userId);
-		// 使用Client完成查询操作
-		User demoUser = userClient.findById(order.getUserId());
-		order.setUser(demoUser);
-		return order;
-	}
+	// public Order queryById2(Long userId) {
+	// 	Order order = orderMapper.findById(userId);
+	// 	// 使用Client完成查询操作
+	// 	User demoUser = userClient.findById(order.getUserId());
+	// 	order.setUser(demoUser);
+	// 	return order;
+	// }
 
 }

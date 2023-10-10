@@ -3,6 +3,9 @@ package wo1261931780.orderService.pojo;
 import lombok.Data;
 import wo1261931780.userService.pojo.User;
 
+/**
+ * @author 64234
+ */
 @Data
 public class Order {
     private Long id;

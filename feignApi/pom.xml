@@ -47,6 +47,12 @@
 			<artifactId>feign-httpclient</artifactId>
 			<version>11.8</version>
 		</dependency>
+		<dependency>
+			<groupId>wo1261931780</groupId>
+			<artifactId>userService</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<!--本来我觉得是导入上面的模块来解决问题，实际只需要将pojo迁移到feign模块中，直接导入即可-->
 	</dependencies>
 
 	<build>
