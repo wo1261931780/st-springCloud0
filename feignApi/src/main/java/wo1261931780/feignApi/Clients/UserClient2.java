@@ -9,11 +9,10 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @author wo1261931780
  */
 @FeignClient("userService")
-public class UserClient2 {
+public interface UserClient2 {
+	// FeignClient只能作为一个接口的注解而存在
 
 	@GetMapping("/user/{id}")
-	User findById2(@PathVariable("id") Long id) {
-		return null;
-	}
+	User findById2(@PathVariable("id") Long id);
 
 }

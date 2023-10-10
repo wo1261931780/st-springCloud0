@@ -23,12 +23,22 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
 	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-web</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
 		<!--feign客户端依赖-->
 		<!-- feign内部已经继承了ribbon，不需要额外引入 -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
-			<version>4.0.0</version>
+			<version>4.0.4</version>
 		</dependency>
 		<!--引入HttpClient依赖-->
 		<!--因为feign不支持连接池，所以这里手动引入一个 -->
@@ -38,7 +48,7 @@
 			<version>11.8</version>
 		</dependency>
 	</dependencies>
-	
+
 	<build>
 		<plugins>
 		</plugins>

@@ -8,8 +8,8 @@ import org.springframework.context.annotation.Bean;
  * @author wo1261931780
  */
 public class DefaultFeignConfiguration2 {
-	@Bean
-	public Logger.Level logLevel() {
-		return Logger.Level.BASIC;
-	}
+	// @Bean
+	// public Logger.Level logLevel() {
+	// 	return Logger.Level.BASIC;
+	// }
 }
