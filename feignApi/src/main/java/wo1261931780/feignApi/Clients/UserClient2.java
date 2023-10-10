@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 /**
- * @author 64234
+ * @author wo1261931780
  */
 @FeignClient("userService")
 public class UserClient2 {

@@ -3,7 +3,7 @@ package wo1261931780.feignApi.pojo;
 import lombok.Data;
 
 /**
- * @author 64234
+ * @author wo1261931780
  */ /*
  * Author: junw 45444154+wo1261931780@users.noreply.github.com
  * Date: 2023-04-01 01:41:31

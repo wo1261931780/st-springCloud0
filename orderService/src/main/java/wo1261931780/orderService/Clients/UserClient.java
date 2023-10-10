@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import wo1261931780.userService.pojo.User;
 
 /**
- * @author 64234
+ * @author wo1261931780
  */
 @FeignClient("userService")
 public interface UserClient {

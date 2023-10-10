@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * @author 64234
+ * @author wo1261931780
  */
 @SpringBootApplication
 @EnableFeignClients(clients = FeignClient.class, defaultConfiguration = DefaultApplicationArguments.class)

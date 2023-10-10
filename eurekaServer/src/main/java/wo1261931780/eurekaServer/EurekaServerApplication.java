@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
- * @author 64234
+ * @author wo1261931780
  */
 @SpringBootApplication
 @EnableEurekaServer
