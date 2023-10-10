@@ -200,7 +200,12 @@
 		<!--    <version>2.0.1</version>-->
 		<!--    <scope>test</scope>-->
 		<!--</dependency>-->
-		
+		<!--这里需要使用swagger技术，实际上是为了生成接口文档-->
+		<dependency>
+			<groupId>com.github.xiaoymin</groupId>
+			<artifactId>knife4j-spring-boot-starter</artifactId>
+			<version>3.0.3</version>
+		</dependency>
 		<!--=============================================================================================-->
 		<!--数据库连接池-->
 		<!--=============================================================================================-->
