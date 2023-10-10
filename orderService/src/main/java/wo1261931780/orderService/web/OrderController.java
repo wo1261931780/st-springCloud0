@@ -1,19 +1,13 @@
 package wo1261931780.orderService.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import wo1261931780.orderService.Clients.UserClient;
 import wo1261931780.orderService.pojo.Order;
 import wo1261931780.orderService.service.OrderService;
-import wo1261931780.userService.pojo.User;
-
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 @RestController
 @RequestMapping("/order")

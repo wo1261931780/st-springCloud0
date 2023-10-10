@@ -1,8 +1,5 @@
 package wo1261931780.orderService.config;
 
-import feign.Logger;
-import org.springframework.context.annotation.Bean;
-
 /**
  * @author wo1261931780
  */ /*

@@ -1,9 +1,8 @@
-package wo1261931780.feignApi.Clients;
+package wo1261931780.feignApi.clients;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import wo1261931780.feignApi.pojo.FeignUser;
 import wo1261931780.userService.pojo.User;
 
 /**

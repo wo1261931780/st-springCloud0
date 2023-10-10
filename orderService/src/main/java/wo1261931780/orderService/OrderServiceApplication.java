@@ -4,10 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.openfeign.EnableFeignClients;
-import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
-import wo1261931780.feignApi.Clients.UserClient2;
+import wo1261931780.feignApi.clients.UserClient2;
 import wo1261931780.feignApi.config.DefaultFeignConfiguration2;
 
 /**

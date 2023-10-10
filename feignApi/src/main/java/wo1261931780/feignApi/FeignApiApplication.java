@@ -8,7 +8,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @author wo1261931780
  */
 @SpringBootApplication
-@EnableFeignClients(basePackages = "wo1261931780.feignApi.Clients")
+@EnableFeignClients(basePackages = "wo1261931780.feignApi.clients")
 public class FeignApiApplication {
 	// @EnableFeignClients(basePackages = "wo1261931780.feignApi.feign")
 	// 指定扫描的包，否则会报错：No Feign Client for name: feignClient

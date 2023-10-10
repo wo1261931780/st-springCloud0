@@ -13,7 +13,6 @@ package wo1261931780.orderService.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import wo1261931780.orderService.Clients.UserClient;
 import wo1261931780.orderService.mapper.OrderMapper;
 import wo1261931780.orderService.pojo.Order;
 import wo1261931780.userService.pojo.User;

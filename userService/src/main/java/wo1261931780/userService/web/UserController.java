@@ -1,6 +1,5 @@
 package wo1261931780.userService.web;
 
-import lombok.Value;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -8,10 +7,6 @@ import org.springframework.web.bind.annotation.*;
 import wo1261931780.userService.config.PatternProperties;
 import wo1261931780.userService.pojo.User;
 import wo1261931780.userService.service.UserService;
-
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Locale;
 
 /**
  * @author 64234

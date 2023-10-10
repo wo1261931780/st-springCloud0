@@ -1,4 +1,4 @@
-package wo1261931780.gatewayServer.Filter;
+package wo1261931780.gatewayServer.filter;
 
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
