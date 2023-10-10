@@ -1,16 +1,15 @@
-package wo1261931780.feignApi.pojo;
+package wo1261931780.userService.pojo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
-
-import java.io.Serial;
-import java.io.Serializable;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.io.Serial;
+import java.io.Serializable;
 
 /**
  * Created by Intellij IDEA.
@@ -29,24 +28,21 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class TbUser implements Serializable {
+	@Serial
+	private static final long serialVersionUID = 1L;
 	@ApiModelProperty(value = "主键")
 	@Schema(description = "主键")
 	private Long id;
-
 	/**
 	 * 收件人
 	 */
 	@ApiModelProperty(value = "收件人")
 	@Schema(description = "收件人")
 	private String username;
-
 	/**
 	 * 地址
 	 */
 	@ApiModelProperty(value = "地址")
 	@Schema(description = "地址")
 	private String address;
-
-	@Serial
-	private static final long serialVersionUID = 1L;
 }

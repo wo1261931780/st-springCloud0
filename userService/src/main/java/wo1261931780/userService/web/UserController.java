@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 import wo1261931780.userService.config.PatternProperties;
-import wo1261931780.userService.pojo.User;
+import wo1261931780.userService.pojo.TbUser;
 import wo1261931780.userService.service.UserService;
 
 /**
@@ -59,8 +59,8 @@ public class UserController {
 	 * @return 用户
 	 */
 	@GetMapping("/{id}")
-	public User queryById(@PathVariable("id") Long id,
-	                      @RequestHeader(value = "Truth", required = false) String truth) {
+	public TbUser queryById(@PathVariable("id") Long id,
+	                        @RequestHeader(value = "Truth", required = false) String truth) {
 		// RequestHeader注解，可以获取请求头中的信息，这就是在yml中配置的网关过滤器才有的
 		// required = false，表示可以不传，如果不传，那么就是null
 		System.out.println("truth: " + truth);

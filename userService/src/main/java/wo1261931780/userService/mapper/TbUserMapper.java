@@ -1,9 +1,9 @@
-package wo1261931780.orderService.mapper;
+package wo1261931780.userService.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
-import wo1261931780.orderService.pojo.TbOrder;
+import wo1261931780.userService.pojo.TbUser;
 
 import java.util.List;
 
@@ -18,9 +18,9 @@ import java.util.List;
  */
 
 @Mapper
-public interface TbOrderMapper {
-	@Select("select * from tb_order where id = #{id}")
-	TbOrder findById(Long id);
+public interface TbUserMapper {
+	@Select("select * from tb_user where id = #{id}")
+	TbUser findById(@Param("id") Long id);
 
 	/**
 	 * delete by primary key
@@ -36,11 +36,11 @@ public interface TbOrderMapper {
 	 * @param record the record
 	 * @return insert count
 	 */
-	int insert(TbOrder record);
+	int insert(TbUser record);
 
-	int insertOrUpdate(TbOrder record);
+	int insertOrUpdate(TbUser record);
 
-	int insertOrUpdateSelective(TbOrder record);
+	int insertOrUpdateSelective(TbUser record);
 
 	/**
 	 * insert record to table selective
@@ -48,7 +48,7 @@ public interface TbOrderMapper {
 	 * @param record the record
 	 * @return insert count
 	 */
-	int insertSelective(TbOrder record);
+	int insertSelective(TbUser record);
 
 	/**
 	 * select by primary key
@@ -56,7 +56,7 @@ public interface TbOrderMapper {
 	 * @param id primary key
 	 * @return object by primary key
 	 */
-	TbOrder selectByPrimaryKey(Long id);
+	TbUser selectByPrimaryKey(Long id);
 
 	/**
 	 * update record selective
@@ -64,7 +64,7 @@ public interface TbOrderMapper {
 	 * @param record the updated record
 	 * @return update count
 	 */
-	int updateByPrimaryKeySelective(TbOrder record);
+	int updateByPrimaryKeySelective(TbUser record);
 
 	/**
 	 * update record
@@ -72,11 +72,11 @@ public interface TbOrderMapper {
 	 * @param record the updated record
 	 * @return update count
 	 */
-	int updateByPrimaryKey(TbOrder record);
+	int updateByPrimaryKey(TbUser record);
 
-	int updateBatch(List<TbOrder> list);
+	int updateBatch(List<TbUser> list);
 
-	int updateBatchSelective(List<TbOrder> list);
+	int updateBatchSelective(List<TbUser> list);
 
-	int batchInsert(@Param("list") List<TbOrder> list);
+	int batchInsert(@Param("list") List<TbUser> list);
 }
