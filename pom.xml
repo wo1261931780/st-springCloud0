@@ -14,11 +14,13 @@
 	<name>testSpringCloud</name>
 	<description>Demo project for Spring Boot</description>
 	<modules>
-		<!--<module>userService</module>-->
-		<!--<module>orderService</module>-->
-		<!--<module>eurekaServer</module>-->
-		<!--<module>feignApi</module>-->
+		<!--基础的拆分-->
+		<module>userService</module>
+		<module>orderService</module>
+		<!--添加注册中心的拆分-->
+		<module>eurekaServer</module>
 		<module>gatewayServer</module>
+		<module>feignApi</module>
 	</modules>
 	<packaging>pom</packaging>
 	<properties>
@@ -113,7 +115,7 @@
 			<groupId>com.alibaba.cloud</groupId>
 			<artifactId>spring-cloud-alibaba-dependencies</artifactId>
 			<version>2022.0.0.0</version>
-<!--			<version>2.2.5.RELEASE</version>-->
+			<!--			<version>2.2.5.RELEASE</version>-->
 			<type>pom</type>
 			<scope>import</scope>
 		</dependency>
@@ -563,10 +565,10 @@
 	</repositories>
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
+<!--			<plugin>-->
+<!--				<groupId>org.springframework.boot</groupId>-->
+<!--				<artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--			</plugin>-->
 		</plugins>
 	</build>
 

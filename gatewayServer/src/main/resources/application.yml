@@ -4,5 +4,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        cluster-name: dev
-        server-addr: 2.0.0.1:8848
+        server-addr: localhost:8848
+        ephemeral: false # 是否临时实例，非临时实例会在nacos控制台显示，nacos主动询问非临时实例是否存活
+  application:
+    name: gateway-server
