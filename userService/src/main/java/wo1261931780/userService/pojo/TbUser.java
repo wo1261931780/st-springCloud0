@@ -1,5 +1,6 @@
 package wo1261931780.userService.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -27,6 +28,7 @@ import java.io.Serializable;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@TableName(value = "spring001.tb_user")
 public class TbUser implements Serializable {
 	@Serial
 	private static final long serialVersionUID = 1L;

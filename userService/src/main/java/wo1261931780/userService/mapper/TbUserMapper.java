@@ -1,5 +1,6 @@
 package wo1261931780.userService.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -18,7 +19,13 @@ import java.util.List;
  */
 
 @Mapper
-public interface TbUserMapper {
+public interface TbUserMapper extends BaseMapper<TbUser> {
+	/**
+	 * 根据id查询用户
+	 *
+	 * @param id 用户id
+	 * @return 用户对象
+	 */
 	@Select("select * from tb_user where id = #{id}")
 	TbUser findById(@Param("id") Long id);
 

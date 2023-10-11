@@ -2,6 +2,7 @@ package wo1261931780.orderService;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
@@ -14,6 +15,7 @@ import wo1261931780.feignApi.config.DefaultFeignConfiguration2;
  */
 @SpringBootApplication
 @EnableFeignClients(clients = UserClient2.class, defaultConfiguration = DefaultFeignConfiguration2.class)
+@EnableDiscoveryClient
 public class OrderServiceApplication {
 	// EnableFeignClients加在启动类上，默认全局生效
 	// clients = FeignClient.class指定扫描包，避免注入失败

@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import wo1261931780.feignApi.pojo.FeignOrder;
-import wo1261931780.orderService.pojo.TbOrder;
 import wo1261931780.orderService.service.OrderService;
 
 /**
@@ -17,7 +16,7 @@ import wo1261931780.orderService.service.OrderService;
 @RequestMapping("/order")
 @RefreshScope
 public class OrderController {
-	// RefreshScope实现配置热更新
+	// RefreshScope实现配置热更新，是在nacos中配置的
 
 	@Autowired
 	private OrderService orderService;
@@ -32,13 +31,17 @@ public class OrderController {
 	// }
 	// 这里是测试配置nacos热更新的代码=========================================
 
-
-	// 下面是使用feign来实现的接口调用
-	@GetMapping("{orderId}")
-	public TbOrder queryOrderByUserId(@PathVariable("orderId") Long orderId) {
-		// 根据id查询订单并返回
-		return orderService.queryOrderById(orderId);
-	}
+	// /**
+	//  * 根据id查询订单，使用restTemplate，内置了url
+	//  *
+	//  * @param orderId 订单id
+	//  * @return 订单信息
+	//  */
+	// @GetMapping("{orderId}")
+	// public TbOrder queryOrderByUserId(@PathVariable("orderId") Long orderId) {
+	// 	// 根据id查询订单并返回
+	// 	return orderService.queryOrderById(orderId);
+	// }
 
 	/**
 	 * 下面是使用feign改造的接口调用

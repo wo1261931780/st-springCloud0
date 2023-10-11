@@ -20,7 +20,6 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 
-
 	// 这里是用来读取配置文件的，判断能否生效
 	// @Value("${pattern.dateformat}")
 	// private String dateformat;

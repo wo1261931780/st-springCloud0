@@ -19,6 +19,12 @@ import java.util.List;
 
 @Mapper
 public interface TbOrderMapper {
+	/**
+	 * 根据id查询订单
+	 *
+	 * @param id 订单id
+	 * @return 订单信息
+	 */
 	@Select("select * from tb_order where id = #{id}")
 	TbOrder findById(Long id);
 

@@ -12,6 +12,7 @@ package wo1261931780.orderService.service;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import wo1261931780.feignApi.clients.UserClient2;
@@ -30,11 +31,18 @@ public class OrderService {
 	private TbOrderMapper tbOrderMapper;
 
 	@Autowired
+	@LoadBalanced
 	private RestTemplate restTemplate;
 	// 注入以后发送请求
 	@Autowired
 	private UserClient2 userClient2;
 
+	/**
+	 * 根据id查询订单,使用restTemplate
+	 *
+	 * @param orderId 订单id
+	 * @return 订单信息
+	 */
 	public TbOrder queryOrderById(Long orderId) {
 		// 1.查询订单
 		TbOrder order = tbOrderMapper.findById(orderId);
@@ -56,8 +64,13 @@ public class OrderService {
 	// 对于上面的代码，存在着可读性差，url难以维护的问题
 
 
-	// 注入Feign的接口
-	// 这里就实现了简化代码的操作
+	/**
+	 * 注入Feign的接口
+	 * 这里就实现了简化代码的操作
+	 *
+	 * @param userId 用户id
+	 * @return 订单信息
+	 */
 	public FeignOrder queryById2(Long userId) {
 		TbOrder order = tbOrderMapper.findById(userId);
 		// 使用Client完成查询操作
