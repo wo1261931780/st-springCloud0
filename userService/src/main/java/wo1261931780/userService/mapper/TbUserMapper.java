@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * Created by Intellij IDEA.
- * Project:testSpringCloud
+ * Project:st-springCloud0
  * Package:wo1261931780.userService.pojo
  *
  * @author liujiajun_junw

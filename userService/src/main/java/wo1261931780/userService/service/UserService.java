@@ -7,7 +7,7 @@ import wo1261931780.userService.mapper.TbUserMapper;
 import wo1261931780.userService.pojo.TbUser;
 
 /**
- * @author 64234
+ * @author wo1261931780
  */
 @Service
 public class UserService extends ServiceImpl<TbUserMapper, TbUser> {

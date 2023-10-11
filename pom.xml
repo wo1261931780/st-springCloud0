@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>wo1261931780</groupId>
-	<artifactId>testSpringCloud</artifactId>
+	<artifactId>st-springCloud0</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>testSpringCloud</name>
+	<name>st-springCloud0</name>
 	<description>Demo project for Spring Boot</description>
 	<modules>
 		<!--基础的拆分-->
