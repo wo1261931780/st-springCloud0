@@ -1,15 +1,6 @@
 package wo1261931780.gatewayServer.filter;
 
-/*
- * Author: junw 45444154+wo1261931780@users.noreply.github.com
- * Date: 2023-04-01 16:02:28
- * LastEditors: junw 45444154+wo1261931780@users.noreply.github.com
- * LastEditTime: 2023-04-01 16:02:42
- * FilePath: \st-springCloud\getway\src\main\java\wo1261931780\getway\Filter\AuthorizeFliter.java
- * Description: 1111
- *
- * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved.
- */
+//
 // @Component
 // @Order(0)
 // public class AuthorizeFilter implements GlobalFilter, Ordered {

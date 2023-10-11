@@ -3,6 +3,7 @@ package wo1261931780.gatewayServer.filter;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.core.Ordered;
+import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.stereotype.Component;
@@ -20,8 +21,12 @@ import reactor.core.publisher.Mono;
  * @Description
  */
 @Component
+@Order(0)
 public class AuthorityFilter2 implements GlobalFilter, Ordered {
-
+	// 这里的目的是实现一个全局过滤器，用来拦截所有的请求，
+// 判断是否有token，如果没有token，就拦截，如果有token，就放行。
+// @Order(0)注解，用来定义过滤器的执行顺序，
+// 值越小，优先级越高
 	@Override
 	public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
 		// 1.获取请求参数

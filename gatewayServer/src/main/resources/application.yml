@@ -28,7 +28,7 @@ spring:
             - AddRequestHeader=X-Request-junw,caishuhan # 给请求添加一个请求头
       default-filters: # 默认的过滤器，当没有配置过滤器时，会使用默认的过滤器
         - AddRequestHeader=X-Request-junw,caishuhan # 给所有请求头添加默认的过滤器
-        # 所有的过滤器，实际上都会被转换为getaway，所以能进行同时使用
+        # 所有的过滤器，实际上都会被转换为gateway，所以能进行同时使用
         # 按照具体的顺序依次执行
         # - StripPrefix=1 # 去掉请求路径的前缀，比如请求路径为/order/1，去掉前缀后，请求路径为/1
         # - name: Hystrix # 熔断器，当请求超时或者异常时，会调用fallback方法
@@ -36,7 +36,7 @@ spring:
         #     name: fallback # fallback方法名
         #     fallbackUri: forward:/fallback # fallback方法所在的controller
       default-fallback: forward:/fallback # 默认的fallback方法，全局生效
-        # 当没有符合路由规则的请求时，会调用默认的fallback方法
+      # 当没有符合路由规则的请求时，会调用默认的fallback方法
       # 所有的请求都会经过过滤器，过滤器可以对请求和响应做处理，比如添加请求头、去掉请求路径的前缀、熔断器等等。
       # 同一个类型的过滤器，会按照配置的顺序依次执行。1-2-3这种
       # 浏览器说的跨域问题，是浏览器的安全策略，不是后端的跨域问题
@@ -46,8 +46,8 @@ spring:
         cors-configurations:
           "[/**]": # 配置所有请求
             allowedOrigins: # 允许跨域的域名，*代表所有域名
-              - "http://localhost:8001"
-              - "http://localhost:8002"
+              - "http://localhost:8010"
+              - "http://localhost:8011"
             allowedMethods: # 允许跨域的请求方法，*代表所有请求方法
               - "*"
             allowedHeaders: # 允许跨域的请求头，*代表所有请求头
